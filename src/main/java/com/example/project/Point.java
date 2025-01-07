@@ -9,14 +9,33 @@ public class Point {
       this.y = y;
     }
     
-    // Returns distance between this Point object and another Point object
     public double distanceTo(Point other) {
-      /* IMPLEMENT ME */
+      // sqrt (x2-x1)^2 + (y2-y1)^2
+      int xDiff = other.x - x;
+      int yDiff = other.y - y;
+      double ansSq = Math.pow(xDiff, 2) + Math.pow(yDiff, 2);
+      return Math.pow(ansSq, 0.5);
     }
-  
-    // Returns a string in the format: (x, y)
+
+    public int getX() {
+      return x;
+    }
+
+    public int getY() {
+      return y;
+    }
+
+    public void setX(int newX) {
+      x = newX;
+    }
+
+    public void setY(int newY) {
+      y = newY;
+    }
+
     public String pointInfo() {
-      /* IMPLEMENT ME */
+      String str = "(" + getX() + ", " + getY() + ")";
+      return str;
     }
   }
   
